@@ -54,7 +54,7 @@ public class UIMainScene : MonoBehaviour
         {
             Sprite icon = null;
             if (ResourceDB != null)
-                icon = ResourceDB.GetItem(entry.ResourceId)?.Icone;
+                icon = ResourceDB.GetItem(entry.ResourceId)?.Icon;
             
             InfoPopup.AddToContent(entry.Count, icon);
         }
