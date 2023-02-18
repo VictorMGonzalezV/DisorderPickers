@@ -15,3 +15,4 @@ MonoBehaviour:
   ResourceTypes:
   - {fileID: 11400000, guid: e33426cca62239f4f9d376e16e5ecb0c, type: 2}
   - {fileID: 11400000, guid: 4d05ee76fded8d8498e3f674935c4def, type: 2}
+  - {fileID: 11400000, guid: 059aaef292b6e8f4e97f9f5f5b1c25e5, type: 2}

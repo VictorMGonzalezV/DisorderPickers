@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4cbe7725c3046414b9ffa46e64705f7b, type: 3}
-  m_Name: CylinderResource
+  m_Name: PalletResource
   m_EditorClassIdentifier: 
-  Name: Ooze
-  Id: ooze
-  Icon: {fileID: 21300000, guid: fb6f0b883a6815341b8bd4ff325d7a62, type: 3}
+  Name: Fuel
+  Id: fuel
+  Icon: {fileID: 21300000, guid: 2474eb23f2d335841894e224637bd14b, type: 3}

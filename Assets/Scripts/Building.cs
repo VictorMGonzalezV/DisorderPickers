@@ -21,6 +21,7 @@ public abstract class Building : MonoBehaviour,
     public int InventorySpace = -1;
     
     protected List<InventoryEntry> m_Inventory = new List<InventoryEntry>();
+   
     public List<InventoryEntry> Inventory => m_Inventory;
 
     protected int m_CurrentAmount = 0;

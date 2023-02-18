@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cbe7725c3046414b9ffa46e64705f7b, type: 3}
   m_Name: BoxResource
   m_EditorClassIdentifier: 
-  Name: Money
-  Id: money
-  Icone: {fileID: 21300000, guid: b42f1aab5038c1b4182a40be6cc0b232, type: 3}
+  Name: Ammo
+  Id: ammo
+  Icon: {fileID: 21300000, guid: 193523af9c371654e9293a28fcc162f2, type: 3}

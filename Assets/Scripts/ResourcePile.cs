@@ -10,7 +10,22 @@ public class ResourcePile : Building
 {
     public ResourceItem Item;
 
-    public float ProductionSpeed = 0.5f;
+    private float m_ProductionSpeed = 0.5f;//this is a private backing field
+    public float ProductionSpeed //notice the missing ;
+    {
+        //You can write custom getters/setters 
+        get { return m_ProductionSpeed; }
+        set { //You can also use the custom setter to add validation logic
+            if(value<0.0f)
+            {
+              Debug.LogError("You can't set a negative production value-duh!");
+            } else
+                {
+                  m_ProductionSpeed = value;
+                }
+              
+            }
+    }
 
     private float m_CurrentProduction = 0.0f;
 
@@ -26,13 +41,14 @@ public class ResourcePile : Building
         
         if (m_CurrentProduction < 1.0f)
         {
-            m_CurrentProduction += ProductionSpeed * Time.deltaTime;
+            m_CurrentProduction += m_ProductionSpeed * Time.deltaTime;
         }
     }
 
     public override string GetData()
     {
-        return $"Producing at the speed of {ProductionSpeed}/s";
+        //$ denotes an interpolated string, with the part inside {} being the interpolated expression
+        return $"Producing at the speed of {m_ProductionSpeed}/s";
         
     }
     
