@@ -43,5 +43,16 @@ public class ProductivityUnit : Unit
         base.GoTo(position);
     }
 
+    //Overriding the base GetName() function to display "Manager"
+    public override string GetName()
+    {
+        return "Manager";
+    }
+
+    public override string GetData()
+    {
+        return "Place next to resource piles to increase productivity.\nCan chase Slackers away";
+    }
+
 }
 

@@ -41,20 +41,25 @@ public class UserControl : MonoBehaviour
     public void HandleAction()
     {
         //right click give order to the unit
+     
         var ray = GameCamera.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit))
         {
             var building = hit.collider.GetComponentInParent<Building>();
-
-            if (building != null)
+            //If the selected Unit is not a SlackerUnit, it will follow user commands, else, it will do nothing
+            if(m_Selected.GetComponent<SlackerUnit>()==null)
             {
-                m_Selected.GoTo(building);
+                if (building != null)
+                {
+                    m_Selected.GoTo(building);
+                }
+                else
+                {
+                    m_Selected.GoTo(hit.point);
+                }
             }
-            else
-            {
-                m_Selected.GoTo(hit.point);
-            }
+         
         }
     }
 

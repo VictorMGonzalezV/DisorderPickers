@@ -25,7 +25,13 @@ public class TransporterUnit : Unit
         {
             //we arrive at the base, unload!
             if (m_Transporting.Count > 0)
+            {
                 m_Target.AddItem(m_Transporting.ResourceId, m_Transporting.Count);
+                //After dropping a resource on the Base, the contents are checked against the target value in the OrderManager instance
+                OrderManager.Instance.CheckOrder();
+            }
+                
+                
 
             //we go back to the building we came from
             GoTo(m_CurrentTransportTarget);

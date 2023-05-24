@@ -32,13 +32,12 @@ public abstract class Unit : MonoBehaviour,
         }
     }
 
-    void SetColor(Color c)
+    //I made this method protected from private so the Slacker Unit can paint itself. This fix was cleaner than previous attempts modifying the ColorHandler itself
+    protected void SetColor(Color c)
     {
         var colorHandler = GetComponentInChildren<ColorHandler>();
-        if (colorHandler != null)
-        {
-            colorHandler.SetColor(c);
-        }
+        colorHandler.SetColor(c);
+        
     }
 
     private void Update()
